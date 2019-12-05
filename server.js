@@ -81,15 +81,15 @@ app.post("/api/tables", (req, res) => {
   res.json(newTable);
 });
 
-// app.post("/api/waitlist", (req, res) => {
-//     const newWaitlist = req.body;
+app.post("/api/waitlist", (req, res) => {
+    const newWaitlist = req.body;
 
-//     console.log(newWaitlist);
+    console.log(newWaitlist);
 
-//     waitlist.push(newWaitlist);
+    waitlist.push(newWaitlist);
 
-//     res.json(newWaitlist);
-// });
+    res.json(newWaitlist);
+});
 
 // Starts the server to begin listening
 // =============================================================
