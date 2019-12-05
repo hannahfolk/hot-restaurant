@@ -14,14 +14,46 @@ app.use(express.json());
 
 // Reservations (DATA)
 //=============================================================
-const tables = [];
+const tables = [
+    {
+        routeName: "hannah",
+        name: "Hannah Folk",
+        phoneNumber: 5555555555,
+        email: "hfolk25@gmail.com",
+        uniqueID: "Hannah"
+    },
+    {
+        routeName: "ty",
+        name: "Ty Shivers",
+        phoneNumber: 5555555555,
+        email: "tshivers@gmail.com",
+        uniqueID: "Ty"
+    },
+    {
+        routeName: "omar",
+        name: "Omar Patel",
+        phoneNumber: 5555555555,
+        email: "omarpatel123@gmail.com",
+        uniqueID: "Omar"
+    }
+];
+
+const waitlist = [
+    {
+        routeName: "peter",
+        name: "Peter Park",
+        phoneNumber: 5555555555,
+        email: "pPark@gmail.com",
+        uniqueID: "Peter"
+    }
+];
 
 // Routes
 // =============================================================
 
 // Basic route that sends the user first to the AJAX Page
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "view.html"));
+  res.sendFile(path.join(__dirname, "home.html"));
 });
 
 app.get("/reserve", (req, res) => {
