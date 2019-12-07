@@ -87,10 +87,10 @@ $(".submit").on("click", function(event) {
     event.preventDefault();
     
     var newReservation = {
-        customerName: $("reserve-name").val().trim(),
-        phoneNumber: $("reserve-phone").val().trim(),
-        customerEmail: $("reserve-email").val().trim(),
-        customerID: $("reserve-customer-id").val().trim(),
+        customerName: $("#reserve-name").val(),
+        phoneNumber: $("#reserve-phone").val(),
+        customerEmail: $("#reserve-email").val(),
+        customerID: $("#reserve-unique-id").val(),
     };
 
     console.log(newReservation);
@@ -105,10 +105,10 @@ $(".submit").on("click", function(event) {
         }
     
     // Clears the form after submitting
-    $("reserve-name").val("");
-    $("reserve-phone").val("");
-    $("reserve-email").val("");
-    $("reserve-customer-id").val("");
+    $("#reserve-name").val("");
+    $("#reserve-phone").val("");
+    $("#reserve-email").val("");
+    $("#reserve-unique-id").val("");
     
     });
 
